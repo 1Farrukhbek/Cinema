@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/FuturaPT-Book.woff2") format("woff2"),
+  url("../fonts/FuturaPT-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/FuturaPT-Medium.woff2") format("woff2"),
+  url("../fonts/FuturaPT-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/FuturaPT-Bold.woff2") format("woff2"),
+  url("../fonts/FuturaPT-Bold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Futura PT", "Arial", sans-serif;
+  font-size: 16px;
+  background-color: #804cfa;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position:absolute;
+  z-index: 2;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  border:0;
+  padding:0;
+  clip:rect(0 0 0 0);
+  overflow:hidden;
+}
+
+.container {
+  max-width: 1350px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.movie-poster-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.movie-image {
+  width: 230px;
+  height: 355px;
+  z-index: 5;
+  cursor: pointer;
+  vertical-align: middle;
+  box-shadow: 0 5px 10px black;
+}
+
+.bg::before {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: -20px;
+  left: -167%;
+  background-image: url("../img/bg-justice.jpg");
+  transform-origin: top;
+  transform: scale(0);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  z-index: -1;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  content: "";
+}
+
+.bg1::before {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: -20px;
+  left: -328%;
+  background-image: url("../img/bg-runner.jpg");
+  transform-origin: top;
+  transform: scale(0);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  z-index: -1;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  content: "";
+}
+
+.movie-info {
+  position: absolute;
+  z-index: 0;
+  top: 20px;
+  transform: scale(0);
+  width: 270px;
+  padding-top: 370px;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.movie-poster-wrapper:hover .movie-info {
+  transform: scale(1);
+}
+.bg:hover::before,
+.bg1:hover::before {
+  transform: scale(1);
+}
+
+.movie-heading {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.movie-text {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.current-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: green;
+  margin: 0;
+}
+
+.old-price {
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.buy_button {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.buy_button:hover {
+  background-color: green;
+  color: #fff;
+}
+
+.buy_button:active {
+  opacity: 0.5;
+}
