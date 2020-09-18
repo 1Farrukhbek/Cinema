@@ -88,6 +88,7 @@ img {
 }
 
 .movie-image {
+  position: relative;
   width: 230px;
   height: 355px;
   z-index: 5;
