@@ -73,7 +73,9 @@ img {
 
 .hero-container {
   display: flex;
+  max-width: 900px;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
 }
@@ -91,6 +93,7 @@ img {
   position: relative;
   width: 230px;
   height: 355px;
+  margin-bottom: 200px;
   z-index: 5;
   cursor: pointer;
   vertical-align: middle;
