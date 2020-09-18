@@ -154,6 +154,7 @@ img {
 .movie-poster-wrapper:hover .movie-info {
   transform: scale(1);
 }
+
 .bg:hover::before,
 .bg1:hover::before {
   transform: scale(1);
